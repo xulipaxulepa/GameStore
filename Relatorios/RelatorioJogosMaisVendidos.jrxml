@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c63d54bc-df75-4aeb-84ac-a0a88df64526">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[nome]]></fieldDescription>
+	</field>
+	<field name="ESRB" class="java.lang.String">
+		<fieldDescription><![CDATA[ESRB]]></fieldDescription>
+	</field>
+	<field name="datadelançamento" class="java.lang.String">
+		<fieldDescription><![CDATA[datadelançamento]]></fieldDescription>
+	</field>
+	<field name="valor" class="java.lang.Float">
+		<fieldDescription><![CDATA[valor]]></fieldDescription>
+	</field>
+	<field name="plataforma" class="java.lang.String">
+		<fieldDescription><![CDATA[plataforma]]></fieldDescription>
+	</field>
+	<field name="genero" class="java.lang.String">
+		<fieldDescription><![CDATA[genero]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="fa53b3c7-578d-4cc5-8a8c-a3fab7acc1ee"/>
+				<staticText>
+					<reportElement x="20" y="20" width="555" height="43" forecolor="#FFFFFF" uuid="70d9725b-f5ab-4111-aa50-b0bf34f8050d"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Relatorio Jogos vendidos]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="395" y="63" width="180" height="20" forecolor="#FFFFFF" uuid="d587ee3a-dcaf-4940-9455-69a07ecb87eb"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Xulipa's Gamestore]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="39c81487-9e29-46ba-a5ec-3b052ffdc72e"/>
+			</line>
+			<staticText>
+				<reportElement x="12" y="1" width="100" height="20" uuid="02f3b59a-8070-467a-9054-25b108d57f40"/>
+				<text><![CDATA[ID Jogo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="66" y="1" width="100" height="20" uuid="69d43d79-586a-4f20-9d08-de1363715d06"/>
+				<text><![CDATA[Nome do Jogo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="154" y="1" width="100" height="20" uuid="8b625350-9206-4850-ba3f-e9f50575745f"/>
+				<text><![CDATA[ESRB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="1" width="100" height="20" uuid="52fb4279-91ce-406c-a0a9-3946a46fa7a7"/>
+				<text><![CDATA[Data de Lançamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="293" y="1" width="100" height="20" uuid="5cf24b84-da66-49f7-bcda-97cfec802a82"/>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="1" width="100" height="20" uuid="d7453d18-c719-49fd-9b49-abc35b39d777"/>
+				<text><![CDATA[Plataforma]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="1" width="100" height="20" uuid="a527e349-b659-4da5-bd99-dcb48c3517b4"/>
+				<text><![CDATA[Genero]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="e9503946-3be1-4e0a-a973-4f6ca3822692"/>
+			</line>
+			<textField>
+				<reportElement x="12" y="0" width="100" height="20" uuid="023647fb-14ca-48ee-9ad0-8f00b6ad5271"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="66" y="0" width="100" height="20" uuid="cc8f650b-9c30-42ce-bc68-a5d56ccb60be"/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="154" y="0" width="100" height="20" uuid="b2ece61b-b627-445c-a524-2fb9cf4efc16"/>
+				<textFieldExpression><![CDATA[$F{ESRB}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="100" height="20" uuid="a75a5525-2f66-48d1-ba8d-6ef073500a0a"/>
+				<textFieldExpression><![CDATA[$F{datadelançamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="293" y="0" width="100" height="20" uuid="b4ba405d-2491-4d59-b233-595855fbef9b"/>
+				<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="362" y="0" width="100" height="20" uuid="3563b8b0-73f4-475a-9c7a-0393ec2fb661"/>
+				<textFieldExpression><![CDATA[$F{plataforma}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="0" width="100" height="20" uuid="6a29efc1-db5f-4d52-b212-d04fa84e1c09"/>
+				<textFieldExpression><![CDATA[$F{genero}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="9cde203b-89f5-4574-830c-a8fa0190b537"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="77e3696b-2aa0-465b-918a-0277685cb8d8"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="bc4a296d-55c1-45e7-90ab-ca9e1fdc3c5d"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
