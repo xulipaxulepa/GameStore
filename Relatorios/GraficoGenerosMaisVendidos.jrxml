@@ -7,7 +7,7 @@
 		<fieldDescription><![CDATA[genero]]></fieldDescription>
 	</field>
 	<variable name="generoStealth" class="java.lang.Integer" calculation="Count">
-		<variableExpression><![CDATA[$F{genero}.equals( "Steajth" )? "SomeNotNull" : null]]></variableExpression>
+		<variableExpression><![CDATA[$F{genero}.equals( "Steajth" )? "SomeNotNull": null]]></variableExpression>
 	</variable>
 	<variable name="generoLuta" class="java.lang.Integer" calculation="Count">
 		<variableExpression><![CDATA[$F{genero}.equals( "Luta" ) ? "SomeNotNull" : null]]></variableExpression>
@@ -63,52 +63,10 @@
 	</columnHeader>
 	<detail>
 		<band height="222">
-			<line>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="d88b95e1-241b-4a46-8b63-5dcfece61e31"/>
-			</line>
-			<pieChart>
-				<chart>
-					<reportElement x="0" y="19" width="555" height="203" uuid="6620b55f-c326-4c47-b495-57feb256202c"/>
-					<chartTitle/>
-					<chartSubtitle/>
-					<chartLegend/>
-				</chart>
-				<pieDataset>
-					<dataset incrementType="Report"/>
-					<pieSeries>
-						<keyExpression><![CDATA["Stealth"]]></keyExpression>
-						<valueExpression><![CDATA[$V{generoStealth}]]></valueExpression>
-					</pieSeries>
-					<pieSeries>
-						<keyExpression><![CDATA["Luta"]]></keyExpression>
-						<valueExpression><![CDATA[$V{generoLuta}]]></valueExpression>
-					</pieSeries>
-					<pieSeries>
-						<keyExpression><![CDATA["Aventura"]]></keyExpression>
-						<valueExpression><![CDATA[$V{generoAventura}]]></valueExpression>
-					</pieSeries>
-					<pieSeries>
-						<keyExpression><![CDATA["Ação"]]></keyExpression>
-						<valueExpression><![CDATA[$V{generoAção}]]></valueExpression>
-					</pieSeries>
-					<pieSeries>
-						<keyExpression><![CDATA["RPG"]]></keyExpression>
-						<valueExpression><![CDATA[$V{generoRPG}]]></valueExpression>
-					</pieSeries>
-					<pieSeries>
-						<keyExpression><![CDATA["Corrida"]]></keyExpression>
-						<valueExpression><![CDATA[$V{generoCorrida}]]></valueExpression>
-					</pieSeries>
-					<pieSeries>
-						<keyExpression><![CDATA["Esporte"]]></keyExpression>
-						<valueExpression><![CDATA[$V{generoEsporte}]]></valueExpression>
-					</pieSeries>
-				</pieDataset>
-				<piePlot>
-					<plot/>
-					<itemLabel/>
-				</piePlot>
-			</pieChart>
+			<textField>
+				<reportElement x="87" y="35" width="100" height="20" uuid="941bbd87-071f-4fc1-a08c-a9d1b3130d55"/>
+				<textFieldExpression><![CDATA[$V{generoStealth}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 	<columnFooter>

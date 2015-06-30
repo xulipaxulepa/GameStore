@@ -1,31 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0930e199-8780-4cb4-9201-54a4382a8e67">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6f195156-942a-4771-8584-69c50bcbeba4">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<field name="genero" class="java.lang.String">
 		<fieldDescription><![CDATA[genero]]></fieldDescription>
 	</field>
-	<variable name="generoStealth" class="java.lang.Integer" calculation="Count">
-		<variableExpression><![CDATA[$F{genero}.equals( "Steajth" )? "SomeNotNull" : null]]></variableExpression>
-	</variable>
-	<variable name="generoLuta" class="java.lang.Integer" calculation="Count">
-		<variableExpression><![CDATA[$F{genero}.equals( "Luta" ) ? "SomeNotNull" : null]]></variableExpression>
-	</variable>
-	<variable name="generoAventura" class="java.lang.Integer" calculation="Count">
-		<variableExpression><![CDATA[$F{genero}.equals( "Aventura" )? "SomeNotNull" : null]]></variableExpression>
-	</variable>
-	<variable name="generoAção" class="java.lang.Integer" calculation="Count">
-		<variableExpression><![CDATA[$F{genero}.equals( "Ação" )? "SomeNotNull" : null]]></variableExpression>
-	</variable>
 	<variable name="generoRPG" class="java.lang.Integer" calculation="Count">
-		<variableExpression><![CDATA[$F{genero}.equals( "RPG" ) ? "SomeNotNull" : null]]></variableExpression>
-	</variable>
-	<variable name="generoCorrida" class="java.lang.Integer" calculation="Count">
-		<variableExpression><![CDATA[$F{genero}.equals( "Corrida" ) ? "SomeNotNull" : null]]></variableExpression>
-	</variable>
-	<variable name="generoEsporte" class="java.lang.Integer" calculation="Count">
-		<variableExpression><![CDATA[$F{genero}.equals( "Esporte" )? "SomeNotNull" : null]]></variableExpression>
+		<variableExpression><![CDATA[$F{genero}.equals( "RPG" )? "SomeNotNull" : null]]></variableExpression>
 	</variable>
 	<background>
 		<band/>
@@ -33,20 +15,20 @@
 	<title>
 		<band height="72">
 			<frame>
-				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="8d643dae-cc98-40a2-bfeb-79e9a3e5538d"/>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="13335a17-8d20-494b-be50-fdb417572361"/>
 				<staticText>
-					<reportElement x="20" y="20" width="555" height="43" forecolor="#FFFFFF" uuid="e330b924-d081-4a4c-8320-846a15a2a863"/>
+					<reportElement x="20" y="20" width="360" height="43" forecolor="#FFFFFF" uuid="13c36c27-854e-40dc-a817-6a3335bda516"/>
 					<textElement>
-						<font size="24" isBold="true"/>
+						<font size="34" isBold="true"/>
 					</textElement>
-					<text><![CDATA[Grafico de generos mais jogados]]></text>
+					<text><![CDATA[Teste do relatorio]]></text>
 				</staticText>
 				<staticText>
-					<reportElement x="395" y="63" width="180" height="20" forecolor="#FFFFFF" uuid="eee0bbf3-1ce7-45e2-bc9f-90f9b7951da8"/>
+					<reportElement x="395" y="43" width="180" height="20" forecolor="#FFFFFF" uuid="532a2906-7d78-4b12-877b-3fd1fd56bff1"/>
 					<textElement textAlignment="Right">
 						<font size="14" isBold="false"/>
 					</textElement>
-					<text><![CDATA[Xulipa s GameStore]]></text>
+					<text><![CDATA[Xulipa's Gamestore]]></text>
 				</staticText>
 			</frame>
 		</band>
@@ -57,58 +39,27 @@
 	<columnHeader>
 		<band height="21">
 			<line>
-				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="5f56e90a-1bfc-42b9-a420-f9ba61863ddd"/>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="46bd43df-257f-492e-834c-38251281e856"/>
 			</line>
+			<staticText>
+				<reportElement x="23" y="1" width="100" height="20" uuid="851bc726-f233-44a6-a5a7-d4ec0b1483a5"/>
+				<text><![CDATA[genero]]></text>
+			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="222">
+		<band height="20">
 			<line>
-				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="d88b95e1-241b-4a46-8b63-5dcfece61e31"/>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="87bb309e-b24a-4746-a4dd-4228b0909877"/>
 			</line>
-			<pieChart>
-				<chart>
-					<reportElement x="0" y="19" width="555" height="203" uuid="6620b55f-c326-4c47-b495-57feb256202c"/>
-					<chartTitle/>
-					<chartSubtitle/>
-					<chartLegend/>
-				</chart>
-				<pieDataset>
-					<dataset incrementType="Report"/>
-					<pieSeries>
-						<keyExpression><![CDATA["Stealth"]]></keyExpression>
-						<valueExpression><![CDATA[$V{generoStealth}]]></valueExpression>
-					</pieSeries>
-					<pieSeries>
-						<keyExpression><![CDATA["Luta"]]></keyExpression>
-						<valueExpression><![CDATA[$V{generoLuta}]]></valueExpression>
-					</pieSeries>
-					<pieSeries>
-						<keyExpression><![CDATA["Aventura"]]></keyExpression>
-						<valueExpression><![CDATA[$V{generoAventura}]]></valueExpression>
-					</pieSeries>
-					<pieSeries>
-						<keyExpression><![CDATA["Ação"]]></keyExpression>
-						<valueExpression><![CDATA[$V{generoAção}]]></valueExpression>
-					</pieSeries>
-					<pieSeries>
-						<keyExpression><![CDATA["RPG"]]></keyExpression>
-						<valueExpression><![CDATA[$V{generoRPG}]]></valueExpression>
-					</pieSeries>
-					<pieSeries>
-						<keyExpression><![CDATA["Corrida"]]></keyExpression>
-						<valueExpression><![CDATA[$V{generoCorrida}]]></valueExpression>
-					</pieSeries>
-					<pieSeries>
-						<keyExpression><![CDATA["Esporte"]]></keyExpression>
-						<valueExpression><![CDATA[$V{generoEsporte}]]></valueExpression>
-					</pieSeries>
-				</pieDataset>
-				<piePlot>
-					<plot/>
-					<itemLabel/>
-				</piePlot>
-			</pieChart>
+			<textField>
+				<reportElement x="23" y="0" width="100" height="20" uuid="e0207295-6866-46b1-9de8-ddf8c26fc1a1"/>
+				<textFieldExpression><![CDATA[$F{genero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="197" y="0" width="100" height="20" uuid="b70b5579-1ef0-45fe-935a-ff484d7e078a"/>
+				<textFieldExpression><![CDATA[$V{generoRPG}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 	<columnFooter>
@@ -117,16 +68,16 @@
 	<pageFooter>
 		<band height="17">
 			<textField>
-				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="ac2ada8c-b47c-4cac-9bf4-c4159527208c"/>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="b82fd5d4-1a6d-4b9c-be41-588628a2468e"/>
 				<textElement textAlignment="Right"/>
 				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
-				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="81176d2e-e9ba-4ed9-9cf7-0b8ac37017ae"/>
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="125327d5-7447-4bd8-b7cf-bcf05e7d6dfd"/>
 				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 			<textField pattern="EEEEE dd MMMMM yyyy">
-				<reportElement x="0" y="4" width="100" height="13" uuid="4187cc58-e2ab-4d11-a495-ca4c1a0b7de1"/>
+				<reportElement x="0" y="4" width="100" height="13" uuid="40af897d-8ce4-4096-8aa8-95a5d315ef02"/>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 		</band>
